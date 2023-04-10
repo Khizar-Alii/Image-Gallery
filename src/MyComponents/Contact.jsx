@@ -20,7 +20,7 @@ function Contact() {
         </div>
         <div className="form-group">
           <label htmlFor="password">Password:</label>
-          <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+          <input type="password" id="password" autocomplete="current-password"  value={password} onChange={(e) => setPassword(e.target.value)} />
         </div>
         <button type="submit">Submit</button>
       </form>
