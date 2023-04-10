@@ -14,9 +14,14 @@ export default function Navbar() {
       <h2 onClick={handleClick} className="heading">My Gallery</h2>
       <nav>
         <ul>
-          <li><Link to="Image-Gallery">Home</Link></li>
+        <li><Link to={`${process.env.PUBLIC_URL}/Image-Gallery`}>Home</Link></li>
+        <li><Link to={`${process.env.PUBLIC_URL}/about`}>About</Link></li>
+        <li><Link to={`${process.env.PUBLIC_URL}/contact`}>Contact</Link></li>
+
+
+          {/* <li><Link to="Image-Gallery">Home</Link></li>
           <li><Link to="/about">About</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
+          <li><Link to="/contact">Contact</Link></li> */}
         </ul>
       </nav>
     </header>
