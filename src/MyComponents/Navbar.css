@@ -1,3 +1,5 @@
+/* Navbar styles */
+
 header {
   display: flex;
   justify-content: space-between;
@@ -9,6 +11,7 @@ header {
 
 .heading {
   color: #444;
+  cursor: pointer;
 }
 
 nav ul {
@@ -31,4 +34,22 @@ li a {
 
 li a:hover {
   color: #00adb5;
+}
+
+/* Responsive styles */
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav li {
+    margin: 1rem 0;
+  }
 }

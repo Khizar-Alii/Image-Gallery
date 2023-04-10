@@ -2,6 +2,7 @@ import DisplayImages from "./DisplayImages";
 import "./ImageComponent.css";
 import React, { useState } from "react";
 
+
 const images = [
   {
     id: 1,
@@ -149,7 +150,152 @@ const images = [
     title: "Sunrise",
     url: "https://picsum.photos/id/40/800/600",
   },
+  {
+    id: 31,
+    title: "Image 10",
+    url: "https://picsum.photos/id/10/300/200",
+    category: "Animals"
+  },
+  {
+    id: 32,
+    title: "Image 11",
+    url: "https://picsum.photos/id/11/300/200",
+    category: "Architecture"
+  },
+  {
+    id: 33,
+    title: "Image 12",
+    url: "https://picsum.photos/id/12/300/200",
+    category: "Architecture"
+  },
+  {
+    id: 34,
+    title: "Image 13",
+    url: "https://picsum.photos/id/13/300/200",
+    category: "Architecture"
+  },
+  {
+    id: 35,
+    title: "Image 14",
+    url: "https://picsum.photos/id/14/300/200",
+    category: "Architecture"
+  },
+  {
+    id: 36,
+    title: "Image 15",
+    url: "https://picsum.photos/id/15/300/200",
+    category: "Architecture"
+  },
+  {
+    id: 37,
+    title: "Image 16",
+    url: "https://picsum.photos/id/16/300/200",
+    category: "Food"
+  },
+  {
+    id: 38,
+    title: "Image 17",
+    url: "https://picsum.photos/id/17/300/200",
+    category: "Food"
+  },
+  {
+    id: 39,
+    title: "Autumn Leaves",
+    url: "https://picsum.photos/id/1015/200/300",
+    category: "Nature"
+  },
+  {
+    id: 40,
+    title: "Cityscape",
+    url: "https://picsum.photos/id/1025/200/300",
+    category: "City"
+  },
+  {
+    id: 41,
+    title: "Mountain View",
+    url: "https://picsum.photos/id/1042/200/300",
+    category: "Nature"
+  },
+  {
+    id: 42,
+    title: "Sunset on the Beach",
+    url: "https://picsum.photos/id/1050/200/300",
+    category: "Nature"
+  },
+  {
+    id: 43,
+    title: "Night Sky",
+    url: "https://picsum.photos/id/1064/200/300",
+    category: "Space"
+  },
+  {
+    id: 44,
+    title: "Old Town",
+    url: "https://picsum.photos/id/1074/200/300",
+    category: "City"
+  },
+  {
+    id: 45,
+    title: "Green Forest",
+    url: "https://picsum.photos/id/1082/200/300",
+    category: "Nature"
+  },
+  {
+    id: 46,
+    title: "Waterfall",
+    url: "https://picsum.photos/id/1084/200/300",
+    category: "Nature"
+  },
+  {
+    id: 47,
+    title: "City Night Lights",
+    url: "https://picsum.photos/id/109/200/300",
+    category: "City"
+  },
+  {
+    id: 48,
+    title: "Snowy Mountains",
+    url: "https://picsum.photos/id/110/200/300",
+    category: "Nature"
+  },
+  {
+    id: 49,
+    title: "Futuristic City",
+    url: "https://picsum.photos/id/111/200/300",
+    category: "City"
+  },
+  {
+    id: 50,
+    title: "Sunrise on the Beach",
+    url: "https://picsum.photos/id/112/200/300",
+    category: "Nature"
+  },
+  {
+    id: 51,
+    title: "Star Trails",
+    url: "https://picsum.photos/id/113/200/300",
+    category: "Space"
+  },
+  {
+    id: 52,
+    title: "Green Mountains",
+    url: "https://picsum.photos/id/114/200/300",
+    category: "Nature"
+  },
+  {
+    id: 53,
+    title: "City at Night",
+    url: "https://picsum.photos/id/115/200/300",
+    category: "City"
+  },
+  {
+    id: 54,
+    title: "Aurora Borealis",
+    url: "https://picsum.photos/id/116/200/300",
+    category: "Nature"
+  }
 ];
+
 
 const ImageComponent = () => {
   const [showGallery, setShowGallery] = useState(false);
