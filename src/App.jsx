@@ -6,7 +6,6 @@ import Contact from "./MyComponents/Contact";
 import { Route, Routes } from "react-router-dom"
 import './index.css'
 import DisplayImages from "./MyComponents/DisplayImages";
-import IndiviualImage from "./MyComponents/IndiviualImage";
 const images = [
   {
     id: 1,
@@ -307,11 +306,10 @@ function App() {
     <div className="App">
        <Navbar/>
        <Routes>
-       <Route path="Image-Gallery" element={<ImageComponent />} />
+       <Route path="/Image-Gallery" element={<ImageComponent />} />
        <Route path="/Image-Gallery/about" element={<About />} />
        <Route path="/Image-Gallery/contact" element={<Contact />} />
        <Route path="/Image-Gallery/displayImg" element={<DisplayImages images={images}/>} />
-       <Route path="/Image-Gallery/indiviualimg" element={<IndiviualImage/>} />
        <Route path="*" element={<h1>Page Not Found</h1>} />
       </Routes>
     </div>
