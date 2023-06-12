@@ -1,31 +1,25 @@
 import React, { useState } from "react";
 import "./DisplayImages.css";
 import IndiviualImage from "./IndiviualImage";
+import { Link } from "react-router-dom";
 
 
 const DisplayImages = ({ images }) => {
   const [selectImg , setSelectImg] = useState(null)
-  const [showImg, setShowImg] = useState();
-  const [showAllImages, setshowAllImages] = useState(true);
-
-
   const handleClick = (e) =>{
     setSelectImg(e.target.src)
-    e.stopPropagation()
-    setShowImg(true)
-    setshowAllImages(false)
   }
   return (
     <div className="container">
       {images.map((item) => {
         return (
-          (showAllImages && <div className="content" key={item.id}>
+          <div className="content" key={item.id}>
             <h2>{item.title}</h2>
-             <img onClick={handleClick} src={item.url} alt={item.title} />
-          </div>)
+            <Link to='/Image-Gallery/indiviualimg'><img onClick={handleClick} src={item.url} alt={item.title} /></Link>
+          </div>
         );
       })}
-      {showImg && <IndiviualImage selectImg = {selectImg} images = {images}/>}
+      <IndiviualImage selectImg = {selectImg} />
     </div>
   );
 };

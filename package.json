@@ -23,6 +23,21 @@
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react": "^3.1.0",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.23",
+    "tailwindcss": "^3.3.2",
     "vite": "^4.2.0"
+  },
+  "description": "Easily showcase your images with our React Image Gallery app. Click the 'Browse Images' button to view your collection in a sleek format.\r https://khizar-alii.github.io/Image-Gallery/\r Browse and showcase your favorite images with ease using our React Image Gallery app. Simply click the 'Browse Images' button to view your collection in a stunning and user-friendly format. With intuitive functionality and a sleek design, this app is perfect for all your photo-sharing needs",
+  "main": "vite.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Khizar-Alii/Image-Gallery.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Khizar-Alii/Image-Gallery/issues"
   }
 }

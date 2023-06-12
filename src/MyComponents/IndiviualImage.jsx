@@ -3,8 +3,9 @@ import DisplayImages from "./DisplayImages";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import "./IndiviualImage.css";
+import { Link } from "react-router-dom";
 
-const IndiviualImage = ({ selectImg, images }) => {
+const IndiviualImage = ({ selectImg}) => {
   const [goBack, setGoBack] = useState(false);
   const [allImg, setAllImg] = useState(true);
   const [showbtn, setshowbtn] = useState(true);
@@ -30,12 +31,10 @@ const IndiviualImage = ({ selectImg, images }) => {
           />
         </div>
       )}
-      {showbtn && (
-        <button className="button" onClick={handleClick}>
+      <Link to='/Image-Gallery/displayImg'><button className="button" onClick={handleClick}>
           Go Back
-        </button>
-      )}
-      {goBack && <DisplayImages images={images} />}
+          Component is not created yet
+        </button></Link>
     </div>
   );
 };
