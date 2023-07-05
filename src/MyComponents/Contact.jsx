@@ -1,52 +1,39 @@
-import React, { useState } from "react";
-import "./Contact.css"; // Import the CSS file
+import React from 'react';
+import { useForm } from 'react-hook-form';
+import './Contact.css';
 
 function Contact() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const { register, handleSubmit, formState: { errors } } = useForm();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form submitted:", { name, email, message });
-    setEmail('')
-    setName('')
-    setMessage('')
+  const onSubmit = (data) => {
+    console.log(data);
   };
 
   return (
-    <form className="form-container" onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="name">Name:</label>
-        <input
-          type="text"
-          id="name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          autoComplete="name" // Autocomplete for name
-        />
-      </div>
-      <div>
-        <label htmlFor="email">Email:</label>
-        <input
-          type="email"
-          id="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          autoComplete="email" // Autocomplete for email
-        />
-      </div>
-      <div>
-        <label htmlFor="message">Message:</label>
-        <textarea
-          id="message"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          autoComplete="off" // Disable autocomplete for message (optional)
-        />
-      </div>
-      <button type="submit">Submit</button>
-    </form>
+    <div className="form-container">
+      <h1>Contact Form</h1>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <div className="form-group">
+          <label>Name</label>
+          <input {...register('name', { required: true })} />
+          {errors.name && <span className="error">Name is required</span>}
+        </div>
+
+        <div className="form-group">
+          <label>Email</label>
+          <input {...register('email', { required: true, pattern: /^\S+@\S+$/i })} />
+          {errors.email && <span className="error">Please enter a valid email address</span>}
+        </div>
+
+        <div className="form-group">
+          <label>Message</label>
+          <textarea {...register('message', { required: true })} />
+          {errors.message && <span className="error">Message is required</span>}
+        </div>
+
+        <button type="submit" className="submit-btn">Submit</button>
+      </form>
+    </div>
   );
 }
 
